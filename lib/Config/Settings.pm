@@ -6,7 +6,7 @@ use Parse::RecDescent;
 use strict;
 use warnings;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 my $parser = Parse::RecDescent->new (<<'EOF');
 config:
@@ -473,7 +473,7 @@ coderef.
     connect_info {
       dsn        "dbi:SQLite:dbname=__HOME__/db/myapp.db";
       AutoCommit;
-      auto_savepoints;
+      auto_savepoint;
     };
   };
 
@@ -511,10 +511,24 @@ coderef.
 
 =back
 
-=head1 BUGS
+=head1 BUGS AND DEVELOPMENT
 
-Most software has bugs. This module probably isn't an exception. 
-If you find a bug please either email me, or add the bug to cpan-RT.
+So you think you might have found a bug in my software do you? Well,
+don't be shy about it. I can't improve this package if you don't tell
+me about it. Go to its homepage listed below where you will find an
+issue tracker.
+
+B<Please don't use the CPAN-RT issue tracker to report bugs.> Although
+I occationally check it, chances are you're not going to get a fast
+response.
+
+  Homepage: http://redmine.berle.cc/projects/show/config-settings
+
+  Git: git@github.com:berle/config-settings.git
+
+=over 4
+
+=item 
 
 =head1 AUTHOR
 
@@ -522,10 +536,25 @@ Anders Nor Berle E<lt>berle@cpan.orgE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2009 by Anders Nor Berle.
+Copyright (c) 2009 Anders Nor Berle
 
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself. 
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
 
 =cut
 
